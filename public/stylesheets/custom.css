@@ -1,0 +1,10 @@
+.title, .title:hover {
+  text-decoration: none;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.title img {
+  margin-left: 10px;
+}
