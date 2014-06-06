@@ -1,0 +1,14 @@
+div.jumbotron
+  h1 今までのKPT一覧
+  table.table.table-striped.table-bordered.table-hover
+    thead
+      tr
+        th 作成日
+        th 状態
+        th 名称
+    tbody
+      - @projects.each do |project|
+        tr style="cursor: pointer" onclick="location.href = '/#{project.token}'"
+          td = project.created_at.strftime('%Y/%m/%d')
+          td = project.accept ? '受付中' : '受付終了'
+          td style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" = project.name
